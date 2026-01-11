@@ -6,100 +6,74 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <style>
 body {
-  margin: 0;
   font-family: 'Raleway', Arial, sans-serif;
-  background-color: #f9f9f9;
+  margin:0;
+  padding:0;
+  background:#f9f9f9;
 }
 
-/* Kachelcontainer */
+/* Container */
 .coaching-card {
   max-width: 900px;
-  margin: 40px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-color: #f1f1f1;
-  transition: all 0.3s ease;
+  margin:40px auto;
+  border-radius:12px;
+  background:#f1f1f1;
+  overflow:hidden;
 }
 
-/* Header der Kachel – linksbündig */
+/* Header */
 .coaching-header {
-  background-color: #2F3546;
-  color: white;
-  padding: 30px 24px;
-  text-align: left;
-  position: relative;
+  background:#2F3546;
+  color:white;
+  padding:24px;
+  text-align:left;
 }
 
-.coaching-header div:first-child { font-size: 32px; line-height: 36px; font-weight: bold; }
-.coaching-header div:nth-child(2) { font-size: 28px; line-height: 32px; margin-top: 8px; }
-.coaching-header div:nth-child(3) { font-size: 28px; line-height: 32px; font-style: italic; margin-top: 4px; }
+.coaching-header div:first-child { font-size:32px; font-weight:bold; margin-bottom:8px; }
+.coaching-header div:nth-child(2) { font-size:28px; margin-bottom:4px; }
+.coaching-header div:nth-child(3) { font-size:28px; font-style:italic; }
 
-/* "+" Button */
+/* + Button */
 .toggle-btn {
-  font-size: 48px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 20px auto;
-  user-select: none;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  background-color: #F2EDE4; /* Standard */
-  color: #2F3546;           /* Schrift */
-  text-align: center;
-  transition: all 0.3s ease;
+  font-size:48px;
+  width:80px;
+  height:80px;
+  line-height:80px;
+  text-align:center;
+  border-radius:50%;
+  background:#F2EDE4;
+  color:#2F3546;
+  margin:20px auto;
+  cursor:pointer;
+  display:block;
 }
 
-.toggle-btn:hover {
-  background-color: #2F3546; /* invertiert */
-  color: #F2EDE4;
-}
+.toggle-btn:hover { background:#2F3546; color:#F2EDE4; }
 
-/* Inhalt - smooth aufklappen */
+/* Inhalt */
 .coaching-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 24px;
-  font-size: 18px;
-  line-height: 24px;
-  color: #111;
-  text-align: left;
-  transition: max-height 0.5s ease, padding 0.5s ease;
+  display:none;
+  padding:24px;
+  font-size:18px;
+  line-height:24px;
+  color:#111;
 }
 
-.coaching-content.open {
-  max-height: 3000px;
-  padding: 24px;
-}
-
-/* Listenstil */
-.coaching-content ul { margin: 8px 0 12px 20px; }
-.coaching-content ul li { margin-bottom: 6px; }
-.coaching-content strong { font-weight: bold; }
-
-/* "-" Button – linksbündig + Hover invertiert */
+/* - Button */
 .close-btn {
-  font-size: 48px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 24px 0 0 0;
-  user-select: none;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  background-color: #2F3546;  /* Standard Hintergrund */
-  color: #F2EDE4;            /* Standard Schrift */
-  text-align: center;
-  transition: all 0.3s ease;
+  font-size:48px;
+  width:80px;
+  height:80px;
+  line-height:80px;
+  text-align:center;
+  border-radius:50%;
+  background:#2F3546;
+  color:#F2EDE4;
+  margin:24px auto 0 auto;
+  cursor:pointer;
 }
 
-.close-btn:hover {
-  background-color: #F2EDE4; /* invertiert */
-  color: #2F3546;
-}
+.close-btn:hover { background:#F2EDE4; color:#2F3546; }
 </style>
 </head>
 <body>
@@ -109,7 +83,7 @@ body {
     <div>1. EXECUTIVE COACHING KMU</div>
     <div>Ein Coaching auf Augenhöhe für Entscheider im Mittelstand</div>
     <div>Entscheider im Mittelstand gewinnen Klarheit, stärken ihre persönliche Wirksamkeit und treffen fundierte Entscheidungen in komplexen Situationen.</div>
-    <div class="toggle-btn" onclick="openContent(this)">+</div>
+    <div class="toggle-btn" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">+</div>
   </div>
 
   <div class="coaching-content">
@@ -121,60 +95,9 @@ body {
 
     <p>Im Executive Coaching arbeiten wir 1:1 an Ihrer echten Wirksamkeit. Praxis statt PowerPoint: Wir konzentrieren uns auf konkrete Entscheidungen, Situationen und Ihre persönliche Entwicklung. So entsteht ein Raum, in dem Sie Klarheit gewinnen, Dynamiken erkennen und tragfähige Handlungsoptionen entwickeln, die unmittelbar wirksam sind – auf der persönlichen Ebene und im organisatorischen Kontext.</p>
 
-    <p><strong>Typische Coaching-Themen:</strong></p>
-    <ul>
-      <li>Unternehmensführung in Transformationsphasen</li>
-      <li>Strategische Orientierung und belastbare Entscheidungen</li>
-      <li>Einsamkeit an der Spitze / Sparring auf Augenhöhe</li>
-      <li>Umgang mit komplexen Stakeholdern und Dynamiken</li>
-      <li>Balance zwischen Werte, Verantwortung und persönlicher Wirksamkeit</li>
-      <li>Navigieren in anspruchsvollen Situationen und widersprüchliche Erwartungen</li>
-    </ul>
-
-    <p><strong>Nutzen für Sie als Entscheider:</strong></p>
-    <ul>
-      <li>Klarheit gewinnen: Entscheidungen in komplexen Situationen fundiert treffen.</li>
-      <li>Vertrauen und Bestätigung: Belastende Themen offen teilen, extern reflektiert bekommen und Sicherheit für das eigene Handeln erhalten.</li>
-      <li>Souverän führen: Handlungsfähigkeit stärken, authentisch führen und persönliche Wirksamkeit ausbauen.</li>
-      <li>Nachhaltig wirken: Tragfähige Lösungen entwickeln, die Organisation und persönliche Wirksamkeit langfristig stärken.</li>
-    </ul>
-
-    <div class="close-btn" onclick="closeContent(this)">-</div>
+    <div class="close-btn" onclick="this.parentElement.style.display='none'; this.parentElement.previousElementSibling.querySelector('.toggle-btn').style.display='block';">-</div>
   </div>
 </div>
-
-<script>
-// Accordion öffnen
-function openContent(el){
-  var card = el.closest('.coaching-card');
-  var content = card.querySelector('.coaching-content');
-  content.classList.add('open');
-  el.style.display = 'none';
-  sendHeight();
-}
-
-// Accordion schließen
-function closeContent(el){
-  var card = el.closest('.coaching-card');
-  var content = card.querySelector('.coaching-content');
-  content.classList.remove('open');
-  card.querySelector('.toggle-btn').style.display = 'inline-block';
-  sendHeight();
-}
-
-// Dynamische Höhe für iFrame
-function sendHeight() {
-  const height = document.body.scrollHeight;
-  window.parent.postMessage(height, "*");
-}
-
-// Initial senden
-sendHeight();
-
-// Observer für Änderungen (smooth accordion)
-const observer = new MutationObserver(sendHeight);
-observer.observe(document.querySelector('.coaching-card'), { attributes: true, childList: true, subtree: true });
-</script>
 
 </body>
 </html>
