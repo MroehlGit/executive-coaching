@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Executive Coaching KMU Accordion</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Raleway', Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Kachelcontainer */
+.coaching-card {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+/* Header der Kachel */
+.coaching-header {
+  background-color: #2F3546;
+  color: white;
+  padding: 30px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.coaching-header div:first-child { font-size: 32px; line-height: 36px; font-weight: bold; }
+.coaching-header div:nth-child(2) { font-size: 28px; line-height: 32px; margin-top: 8px; }
+.coaching-header div:nth-child(3) { font-size: 28px; line-height: 32px; font-style: italic; margin-top: 4px; }
+
+/* "+" und "-" Buttons */
+.toggle-btn, .close-btn {
+  font-size: 48px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: inline-block;
+  user-select: none;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background-color: #F2EDE4;
+  color: #2F3546;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover, .close-btn:hover {
+  background-color: #2F3546;
+  color: #F2EDE4;
+}
+
+/* Inhalt - smooth aufklappen */
+.coaching-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+  text-align: left;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.coaching-content.open {
+  max-height: 3000px; /* passt sich automatisch */
+  padding: 24px;
+}
+
+/* Listenstil */
+.coaching-content ul { margin: 8px 0 12px 20px; }
+.coaching-content ul li { margin-bottom: 6px; }
+.coaching-content strong { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="coaching-card">
+  <div class="coaching-header">
+    <div>1. EXECUTIVE COACHING KMU</div>
+    <div>Ein Coaching auf Augenhöhe für Entscheider im Mittelstand</div>
+    <div>Entscheider im Mittelstand gewinnen Klarheit, stärken ihre persönliche Wirksamkeit und treffen fundierte Entscheidungen in komplexen Situationen.</div>
+    <div class="toggle-btn" onclick="openContent(this)">+</div>
+  </div>
+
+  <div class="coaching-content">
+    <p>Entscheidungen im Mittelstand sind selten abstrakt: Kündigungen haben Gesichter, Konflikte haben Namen, Loyalitäten sind historisch gewachsen. Gleichzeitig fehlt vielen Entscheidern ein echter Resonanzraum. Zweifel und komplexe Situationen bleiben oft unausgesprochen, weil die Realität an der Spitze vielschichtig und unmittelbar spürbar ist. Besonders im Stakeholdermanagement zeigt sich diese Dynamik: Gesellschafter, Banken, Kunden, Führungskräfte und Mitarbeitende verfolgen eigene Interessen. Neutralität ist kaum möglich.</p>
+
+    <p>Aus eigener Erfahrung als Geschäftsführer eines technologieorientierten Mittelstandsunternehmens mit über 200 Mitarbeitenden weiß ich, wie wirkungsvoll ein externer, vertrauensvoller Sparringsraum sein kann. Ich habe die Zusammenarbeit mit einem Coach als wichtigen Wachstumstreiber erlebt – fachlich wie persönlich, in Phasen des Erfolgs ebenso wie in Zeiten der Herausforderung.</p>
+
+    <p>In meiner Zeit als Geschäftsführer durfte ich die Transformation eines mittelständischen Unternehmens vom Personaldienstleister zu einem F&E-Dienstleister mit skalierbarem Portfolio begleiten. Dabei war ich für Strategie, Rollen- und Organisationsstrukturen sowie die operative Umsetzung verantwortlich und kenne sowohl die methodischen Anforderungen als auch die praktischen Herausforderungen und Akzeptanzprozesse in der Organisation – von der Geschäftsführung bis zu den Mitarbeitenden. Dieses Praxiswissen fließt direkt in meine Coaching-Arbeit ein, sodass Sie nicht nur Ihre persönliche Wirksamkeit stärken, sondern auch die Dynamiken von Veränderung und Transformation in Ihrem Unternehmen gezielt verstehen und steuern können.</p>
+
+    <p>Im Executive Coaching arbeiten wir 1:1 an Ihrer echten Wirksamkeit. Praxis statt PowerPoint: Wir konzentrieren uns auf konkrete Entscheidungen, Situationen und Ihre persönliche Entwicklung. So entsteht ein Raum, in dem Sie Klarheit gewinnen, Dynamiken erkennen und tragfähige Handlungsoptionen entwickeln, die unmittelbar wirksam sind – auf der persönlichen Ebene und im organisatorischen Kontext.</p>
+
+    <p><strong>Typische Coaching-Themen:</strong></p>
+    <ul>
+      <li>Unternehmensführung in Transformationsphasen</li>
+      <li>Strategische Orientierung und belastbare Entscheidungen</li>
+      <li>Einsamkeit an der Spitze / Sparring auf Augenhöhe</li>
+      <li>Umgang mit komplexen Stakeholdern und Dynamiken</li>
+      <li>Balance zwischen Werte, Verantwortung und persönlicher Wirksamkeit</li>
+      <li>Navigieren in anspruchsvollen Situationen und widersprüchliche Erwartungen</li>
+    </ul>
+
+    <p><strong>Nutzen für Sie als Entscheider:</strong></p>
+    <ul>
+      <li>Klarheit gewinnen: Entscheidungen in komplexen Situationen fundiert treffen.</li>
+      <li>Vertrauen und Bestätigung: Belastende Themen offen teilen, extern reflektiert bekommen und Sicherheit für das eigene Handeln erhalten.</li>
+      <li>Souverän führen: Handlungsfähigkeit stärken, authentisch führen und persönliche Wirksamkeit ausbauen.</li>
+      <li>Nachhaltig wirken: Tragfähige Lösungen entwickeln, die Organisation und persönliche Wirksamkeit langfristig stärken.</li>
+    </ul>
+
+    <div class="close-btn" onclick="closeContent(this)">-</div>
+  </div>
+</div>
+
+<script>
+// Accordion öffnen
+function openContent(el){
+  var card = el.closest('.coaching-card');
+  var content = card.querySelector('.coaching-content');
+  content.classList.add('open');
+  el.style.display = 'none';
+  sendHeight();
+}
+
+// Accordion schließen
+function closeContent(el){
+  var card = el.closest('.coaching-card');
+  var content = card.querySelector('.coaching-content');
+  content.classList.remove('open');
+  card.querySelector('.toggle-btn').style.display = 'inline-block';
+  sendHeight();
+}
+
+// Dynamische Höhe für iFrame
+function sendHeight() {
+  const height = document.body.scrollHeight;
+  window.parent.postMessage(height, "*");
+}
+
+// Initial senden
+sendHeight();
+
+// Observer für Änderungen (smooth accordion)
+const observer = new MutationObserver(sendHeight);
+observer.observe(document.querySelector('.coaching-card'), { attributes: true, childList: true, subtree: true });
+</script>
+
+</body>
+</html>
