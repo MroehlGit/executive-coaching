@@ -2,91 +2,101 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Executive Coaching KMU Accordion</title>
+<title>Executive Coaching KMU</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
 <style>
-body {
-  font-family: 'Raleway', Arial, sans-serif;
+body{
   margin:0;
-  padding:0;
-  background:#f9f9f9;
+  font-family:'Raleway', Arial, sans-serif;
+  background:#ffffff;
 }
 
-/* Container */
-.coaching-card {
-  max-width: 900px;
+.wrapper{
+  max-width:1100px;
   margin:40px auto;
-  border-radius:12px;
-  background:#f1f1f1;
-  overflow:hidden;
 }
 
-/* Header */
-.coaching-header {
+.header{
   background:#2F3546;
-  color:white;
-  padding:24px;
+  color:#ffffff;
+  padding:32px;
   text-align:left;
+  border-radius:14px;
 }
 
-.coaching-header div:first-child { font-size:32px; font-weight:bold; margin-bottom:8px; }
-.coaching-header div:nth-child(2) { font-size:28px; margin-bottom:4px; }
-.coaching-header div:nth-child(3) { font-size:28px; font-style:italic; }
+.header h1{
+  font-size:32px;
+  margin:0 0 12px 0;
+}
 
-/* + Button */
-.toggle-btn {
-  font-size:48px;
-  width:80px;
-  height:80px;
-  line-height:80px;
-  text-align:center;
+.header h2{
+  font-size:28px;
+  margin:0 0 6px 0;
+  font-weight:normal;
+}
+
+.header h3{
+  font-size:28px;
+  margin:0;
+  font-style:italic;
+  font-weight:normal;
+}
+
+.btn{
+  width:84px;
+  height:84px;
   border-radius:50%;
+  font-size:48px;
+  line-height:84px;
+  text-align:center;
+  cursor:pointer;
+  margin:28px auto 0 auto;
+  user-select:none;
+  transition:.2s;
+}
+
+.btn.plus{
   background:#F2EDE4;
   color:#2F3546;
-  margin:20px auto;
-  cursor:pointer;
-  display:block;
 }
 
-.toggle-btn:hover { background:#2F3546; color:#F2EDE4; }
-
-/* Inhalt */
-.coaching-content {
-  display:none;
-  padding:24px;
-  font-size:18px;
-  line-height:24px;
-  color:#111;
-}
-
-/* - Button */
-.close-btn {
-  font-size:48px;
-  width:80px;
-  height:80px;
-  line-height:80px;
-  text-align:center;
-  border-radius:50%;
+.btn.minus{
   background:#2F3546;
   color:#F2EDE4;
-  margin:24px auto 0 auto;
-  cursor:pointer;
+  margin-left:0;
 }
 
-.close-btn:hover { background:#F2EDE4; color:#2F3546; }
+.btn:hover{
+  background:#2F3546;
+  color:#F2EDE4;
+}
+
+.content{
+  display:none;
+  padding:32px;
+  font-size:18px;
+  line-height:1.55;
+}
+
+ul{margin-left:20px}
 </style>
 </head>
+
 <body>
 
-<div class="coaching-card">
-  <div class="coaching-header">
-    <div>1. EXECUTIVE COACHING KMU</div>
-    <div>Ein Coaching auf Augenhöhe für Entscheider im Mittelstand</div>
-    <div>Entscheider im Mittelstand gewinnen Klarheit, stärken ihre persönliche Wirksamkeit und treffen fundierte Entscheidungen in komplexen Situationen.</div>
-    <div class="toggle-btn" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">+</div>
+<div class="wrapper">
+
+  <div class="header">
+    <h1>1. EXECUTIVE COACHING KMU</h1>
+    <h2>Ein Coaching auf Augenhöhe für Entscheider im Mittelstand</h2>
+    <h3>Entscheider im Mittelstand gewinnen Klarheit, stärken ihre persönliche Wirksamkeit und treffen fundierte Entscheidungen in komplexen Situationen.</h3>
+
+    <div class="btn plus" onclick="openBox()">+</div>
   </div>
 
-  <div class="coaching-content">
+  <div class="content" id="content">
     <p>Entscheidungen im Mittelstand sind selten abstrakt: Kündigungen haben Gesichter, Konflikte haben Namen, Loyalitäten sind historisch gewachsen. Gleichzeitig fehlt vielen Entscheidern ein echter Resonanzraum. Zweifel und komplexe Situationen bleiben oft unausgesprochen, weil die Realität an der Spitze vielschichtig und unmittelbar spürbar ist. Besonders im Stakeholdermanagement zeigt sich diese Dynamik: Gesellschafter, Banken, Kunden, Führungskräfte und Mitarbeitende verfolgen eigene Interessen. Neutralität ist kaum möglich.</p>
 
     <p>Aus eigener Erfahrung als Geschäftsführer eines technologieorientierten Mittelstandsunternehmens mit über 200 Mitarbeitenden weiß ich, wie wirkungsvoll ein externer, vertrauensvoller Sparringsraum sein kann. Ich habe die Zusammenarbeit mit einem Coach als wichtigen Wachstumstreiber erlebt – fachlich wie persönlich, in Phasen des Erfolgs ebenso wie in Zeiten der Herausforderung.</p>
@@ -95,9 +105,39 @@ body {
 
     <p>Im Executive Coaching arbeiten wir 1:1 an Ihrer echten Wirksamkeit. Praxis statt PowerPoint: Wir konzentrieren uns auf konkrete Entscheidungen, Situationen und Ihre persönliche Entwicklung. So entsteht ein Raum, in dem Sie Klarheit gewinnen, Dynamiken erkennen und tragfähige Handlungsoptionen entwickeln, die unmittelbar wirksam sind – auf der persönlichen Ebene und im organisatorischen Kontext.</p>
 
-    <div class="close-btn" onclick="this.parentElement.style.display='none'; this.parentElement.previousElementSibling.querySelector('.toggle-btn').style.display='block';">-</div>
+    <p><strong>Typische Coaching-Themen:</strong></p>
+    <ul>
+      <li>Unternehmensführung in Transformationsphasen</li>
+      <li>Strategische Orientierung und belastbare Entscheidungen</li>
+      <li>Einsamkeit an der Spitze / Sparring auf Augenhöhe</li>
+      <li>Umgang mit komplexen Stakeholdern und Dynamiken</li>
+      <li>Balance zwischen Werte, Verantwortung und persönlicher Wirksamkeit</li>
+      <li>Navigieren in anspruchsvollen Situationen</li>
+    </ul>
+
+    <p><strong>Nutzen für Sie:</strong></p>
+    <ul>
+      <li>Klarheit gewinnen</li>
+      <li>Souverän führen</li>
+      <li>Handlungsfähigkeit stärken</li>
+      <li>Nachhaltig wirken</li>
+    </ul>
+
+    <div class="btn minus" onclick="closeBox()">−</div>
   </div>
+
 </div>
+
+<script>
+function openBox(){
+  document.getElementById('content').style.display='block';
+  document.querySelector('.plus').style.display='none';
+}
+function closeBox(){
+  document.getElementById('content').style.display='none';
+  document.querySelector('.plus').style.display='block';
+}
+</script>
 
 </body>
 </html>
