@@ -22,12 +22,12 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Header der Kachel */
+/* Header der Kachel – linksbündig */
 .coaching-header {
   background-color: #2F3546;
   color: white;
   padding: 30px 24px;
-  text-align: center;
+  text-align: left;
   position: relative;
 }
 
@@ -35,25 +35,25 @@ body {
 .coaching-header div:nth-child(2) { font-size: 28px; line-height: 32px; margin-top: 8px; }
 .coaching-header div:nth-child(3) { font-size: 28px; line-height: 32px; font-style: italic; margin-top: 4px; }
 
-/* "+" und "-" Buttons */
-.toggle-btn, .close-btn {
+/* "+" Button */
+.toggle-btn {
   font-size: 48px;
   cursor: pointer;
-  margin: 20px auto;
   display: inline-block;
+  margin: 20px auto;
   user-select: none;
   width: 80px;
   height: 80px;
   line-height: 80px;
   border-radius: 50%;
-  background-color: #F2EDE4;
-  color: #2F3546;
+  background-color: #F2EDE4; /* Standard */
+  color: #2F3546;           /* Schrift */
   text-align: center;
   transition: all 0.3s ease;
 }
 
-.toggle-btn:hover, .close-btn:hover {
-  background-color: #2F3546;
+.toggle-btn:hover {
+  background-color: #2F3546; /* invertiert */
   color: #F2EDE4;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .coaching-content.open {
-  max-height: 3000px; /* passt sich automatisch */
+  max-height: 3000px;
   padding: 24px;
 }
 
@@ -78,6 +78,28 @@ body {
 .coaching-content ul { margin: 8px 0 12px 20px; }
 .coaching-content ul li { margin-bottom: 6px; }
 .coaching-content strong { font-weight: bold; }
+
+/* "-" Button – linksbündig + Hover invertiert */
+.close-btn {
+  font-size: 48px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 24px 0 0 0;
+  user-select: none;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background-color: #2F3546;  /* Standard Hintergrund */
+  color: #F2EDE4;            /* Standard Schrift */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #F2EDE4; /* invertiert */
+  color: #2F3546;
+}
 </style>
 </head>
 <body>
@@ -156,4 +178,3 @@ observer.observe(document.querySelector('.coaching-card'), { attributes: true, c
 
 </body>
 </html>
-
